@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Generator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Brand SVG Generator</h1>
+      <p>Create custom SVG patterns using brand colors and shapes</p>
+    </header>
+    
+    <main>
+      <div class="controls">
+        <div class="control-section">
+          <h2>Composition</h2>
+          
+          <div class="form-group">
+            <label for="composition">Pattern Type</label>
+            <select id="composition">
+              <option value="grid">Grid</option>
+              <option value="radial">Radial</option>
+              <option value="random">Random Distribution</option>
+              <option value="wave">Wave</option>
+              <option value="spiral">Spiral</option>
+              <option value="cluster">Cluster</option>
+              <option value="fractal">Fractal</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="width">Width</label>
+            <input type="number" id="width" min="200" max="2000" value="800">
+          </div>
+          
+          <div class="form-group">
+            <label for="height">Height</label>
+            <input type="number" id="height" min="200" max="2000" value="600">
+          </div>
+          
+          <div class="form-group">
+            <label for="seed">Random Seed</label>
+            <div class="seed-input">
+              <input type="number" id="seed" min="1" max="999999" value="42">
+              <button id="random-seed-btn">Random</button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="control-section pattern-options">
+          <!-- Dynamic pattern options will be inserted here -->
+        </div>
+        
+        <div class="control-section">
+          <h2>Shapes</h2>
+          <div class="shapes-selection" id="shapes-container">
+            <!-- Shape options will be loaded dynamically -->
+          </div>
+        </div>
+        
+        <div class="control-section">
+          <h2>Colors</h2>
+          <div class="colors-selection" id="colors-container">
+            <!-- Color options will be loaded dynamically -->
+          </div>
+        </div>
+        
+        <div class="control-section actions">
+          <button id="generate-btn" class="primary-btn">Generate SVG</button>
+          <button id="download-btn" class="secondary-btn" disabled>Download SVG</button>
+          <button id="save-btn" class="secondary-btn" disabled>Save to Server</button>
+        </div>
+        
+        <div class="control-section templates">
+          <h2>Templates</h2>
+          <div class="templates-container" id="templates-container">
+            <!-- Templates will be loaded dynamically -->
+            <div class="template-empty">No templates saved yet</div>
+          </div>
+          <div class="template-actions">
+            <button id="save-template-btn" class="secondary-btn" disabled>Save Current</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="preview">
+        <h2>Preview</h2>
+        <div class="svg-container" id="svg-container">
+          <div class="svg-placeholder">
+            <p>Click "Generate SVG" to create your design</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <div class="modal" id="save-template-modal">
+      <div class="modal-content">
+        <h2>Save Template</h2>
+        <div class="form-group">
+          <label for="template-name">Template Name</label>
+          <input type="text" id="template-name" placeholder="My Template">
+        </div>
+        <div class="form-group">
+          <label for="template-description">Description (Optional)</label>
+          <textarea id="template-description" rows="3"></textarea>
+        </div>
+        <div class="modal-actions">
+          <button id="save-template-confirm" class="primary-btn">Save</button>
+          <button id="save-template-cancel" class="secondary-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/app.js"></script>
+  <script src="js/patternOptions.js"></script>
+  <script src="js/templates.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{
+  "name": "Brand Name",
+  "version": "1.0.0",
+  "colors": [
+    { "name": "primary", "value": "#FEC042", "description": "Primary brand color - blue" },
+    { "name": "secondary", "value": "#F27D39", "description": "Secondary brand color - red" },
+    { "name": "accent", "value": "#4FA6A4", "description": "Accent color - green" },
+    { "name": "neutral", "value": "#2B2D42", "description": "Neutral color - gray" }
+  ],
+  "shapes": [
+    { "name": "circle", "description": "Circle shape" },
+    { "name": "rect", "description": "Rectangle shape" },
+    { "name": "triangle", "description": "Triangle shape" },
+    { "name": "hexagon", "description": "Hexagon shape" },
+    { "name": "star", "description": "Star shape" },
+    { "name": "diamond", "description": "Diamond shape" },
+    { "name": "pentagon", "description": "Pentagon shape" }, 
+    { "name": "roundedRect", "description": "Rounded rectangle shape" },
+    { "name": "ellipse", "description": "Ellipse shape" },
+    { "name": "crescent", "description": "Crescent shape" },
+    { "name": "cross", "description": "Cross shape" },
+    { "name": "arrow", "description": "Arrow shape" },
+    { "name": "heart", "description": "Heart shape" },
+    { "name": "cloud", "description": "Cloud shape" },
+    { "name": "donut", "description": "Donut shape" },
+    { "name": "concentricCircles", "description": "Four concentric circles" }
+  ],
+  "layouts": [
+    { "name": "grid", "description": "Grid layout" },
+    { "name": "radial", "description": "Radial layout" },
+    { "name": "random", "description": "Random distribution" },
+    { "name": "wave", "description": "Wave pattern" },
+    { "name": "spiral", "description": "Spiral pattern" },
+    { "name": "cluster", "description": "Cluster pattern" },
+    { "name": "fractal", "description": "Fractal pattern" }
+  ],
+  "defaultDimensions": {
+    "width": 800,
+    "height": 600
+  },
+  "sizeConstraints": {
+    "minSize": 10,
+    "maxSize": 200
+  }
+}
